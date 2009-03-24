@@ -1,0 +1,5 @@
+login: my_username
+password: my_password
+min_interval: 30
+max_interval: 300
+interval_step: 10
