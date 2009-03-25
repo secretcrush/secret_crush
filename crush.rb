@@ -5,10 +5,10 @@ class Crush
   TWITTER_NAME = /@([0-9a-z_]+)/i
   
   MESSAGES = {
-    :confirmation   => "Your crush has been noted.",
-    :notification   => "Someone has a crush on you!",
-    :match          => "@%s has a crush on you.",
-    :overlimit      => "You can only set up one crush per week. No matches yet.",
+    :confirmation   => "Your crush has been noted.",  # private message to sender to confirm setup (no match)
+    :notification   => "Someone has a crush on you!", # public tweet to target
+    :match          => "@%s has a crush on you.", # private message to both when matched
+    :overlimit      => "You can only set up one crush per week. No matches yet.", # attempt to send more than one crush per week
   }
 
   def self.create( message )

@@ -14,11 +14,12 @@ module Twibot
         message_count += receive_tweets || 0
 
         interval = message_count > 0 ? min_interval : [interval + step, max].min
-        rescue => e
+        sleep interval
+        rescue Exception => e
           log.error e.message
+          sleep max
         end
         log.debug "Sleeping for #{interval}s"
-        sleep interval
       end
     end
   end
